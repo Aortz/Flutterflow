@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "477031050669",
+    "project_id": "codeexp-e0643",
+    "storage_bucket": "codeexp-e0643.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477031050669:android:790f6b36cb209845cc0524",
+        "android_client_info": {
+          "package_name": "com.flutterflow.codeexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477031050669-pd6r0vrqt3a3r2urs96h88ic1ghagfln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9BzxTvUVezmcG-wATCZpM0ZDc40AwBQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477031050669-pd6r0vrqt3a3r2urs96h88ic1ghagfln.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "477031050669-4kmbicq849di0pvjoos72747jmng81rb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.codeexp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
