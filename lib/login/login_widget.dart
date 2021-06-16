@@ -2,9 +2,11 @@ import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
+import '../home_page_student/home_page_student_widget.dart';
+import '../registration/registration_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class LoginWidget extends StatefulWidget {
   LoginWidget({Key key}) : super(key: key);
@@ -36,7 +38,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           Align(
             alignment: Alignment(0, -1),
             child: Image.network(
-              'https://picsum.photos/seed/483/300',
+              'https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dm9sdW50ZWVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
@@ -66,7 +68,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                               child: Image.network(
-                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/flutterflow_assets/ff_logo.png',
+                                'https://image.flaticon.com/icons/png/128/3364/3364875.png',
                                 width: 50,
                                 height: 50,
                                 fit: BoxFit.cover,
@@ -207,7 +209,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            NavBarPage(initialPage: 'HomePage'),
+                                            HomePageStudentWidget(),
                                       ),
                                       (r) => false,
                                     );
@@ -368,8 +370,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     ),
                                   ),
                                   FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
+                                    onPressed: () async {
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.bottomToTop,
+                                          duration: Duration(milliseconds: 200),
+                                          reverseDuration:
+                                              Duration(milliseconds: 200),
+                                          child: RegistrationWidget(),
+                                        ),
+                                      );
                                     },
                                     text: 'Sign Up',
                                     options: FFButtonOptions(
