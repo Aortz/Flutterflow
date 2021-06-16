@@ -17,7 +17,6 @@ class RegistrationStudentWidget extends StatefulWidget {
 class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
-  bool passwordVisibility;
   TextEditingController textController3;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -26,7 +25,6 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
-    passwordVisibility = false;
     textController3 = TextEditingController();
   }
 
@@ -133,7 +131,7 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                           padding: EdgeInsets.fromLTRB(10, 3, 0, 2),
                           child: TextFormField(
                             controller: textController2,
-                            obscureText: !passwordVisibility,
+                            obscureText: false,
                             decoration: InputDecoration(
                               hintText: 'Password',
                               hintStyle: GoogleFonts.getFont(
@@ -159,19 +157,6 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                                 borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(4.0),
                                   topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              suffixIcon: InkWell(
-                                onTap: () => setState(
-                                  () =>
-                                      passwordVisibility = !passwordVisibility,
-                                ),
-                                child: Icon(
-                                  passwordVisibility
-                                      ? Icons.visibility_outlined
-                                      : Icons.visibility_off_outlined,
-                                  color: Color(0xFF020202),
-                                  size: 25,
                                 ),
                               ),
                             ),
