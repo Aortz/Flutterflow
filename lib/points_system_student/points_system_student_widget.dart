@@ -4,23 +4,16 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PointsSystemTutorWidget extends StatefulWidget {
-  PointsSystemTutorWidget({Key key}) : super(key: key);
+class PointsSystemStudentWidget extends StatefulWidget {
+  PointsSystemStudentWidget({Key key}) : super(key: key);
 
   @override
-  _PointsSystemTutorWidgetState createState() =>
-      _PointsSystemTutorWidgetState();
+  _PointsSystemStudentWidgetState createState() =>
+      _PointsSystemStudentWidgetState();
 }
 
-class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
-  TextEditingController textController;
+class _PointsSystemStudentWidgetState extends State<PointsSystemStudentWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    textController = TextEditingController();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +25,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
         automaticallyImplyLeading: true,
         title: Text(
           'Points system',
-          style: FlutterFlowTheme.title2.override(
+          style: FlutterFlowTheme.title1.override(
             fontFamily: 'Poppins',
           ),
         ),
@@ -62,7 +55,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                 ),
               ),
               Text(
-                '99',
+                '20',
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Poppins',
                   color: FlutterFlowTheme.primaryColor,
@@ -72,6 +65,111 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
+                        child: Text(
+                          'What you can redeem:',
+                          style: FlutterFlowTheme.bodyText2.override(
+                            fontFamily: 'Montserrat',
+                            color: Color(0xFF8B97A2),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                    child: Container(
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Card(
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: Colors.white,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Align(
+                          alignment: Alignment(0.9, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                flex: 2,
+                                child: Align(
+                                  alignment: Alignment(-0.95, 0),
+                                  child: Container(
+                                    width: 80,
+                                    height: 80,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      'https://ak.picdn.net/shutterstock/videos/1013157056/thumb/1.jpg',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment(-0.85, 0),
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(4, 0, 0, 0),
+                                  child: Stack(
+                                    children: [
+                                      Align(
+                                        alignment: Alignment(-0.1, -0.5),
+                                        child: Text(
+                                          'One pen',
+                                          style: FlutterFlowTheme.subtitle2
+                                              .override(
+                                            fontFamily: 'Montserrat',
+                                            color: Color(0xFF15212B),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment(2.64, 0.55),
+                                        child: Text(
+                                          '20 points',
+                                          style: FlutterFlowTheme.bodyText2
+                                              .override(
+                                            fontFamily: 'Montserrat',
+                                            color: Color(0xFF8B97A2),
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Align(
+                                  alignment: Alignment(0.05, 0),
+                                  child: Icon(
+                                    Icons.arrow_forward,
+                                    color: Color(0xFF95A1AC),
+                                    size: 28,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                     child: Container(
@@ -97,7 +195,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                                   Align(
                                     alignment: Alignment(-0.1, -0.5),
                                     child: Text(
-                                      'Log into FlutterFlow',
+                                      '\$5  Bubble Tea Voucher ',
                                       style:
                                           FlutterFlowTheme.subtitle2.override(
                                         fontFamily: 'Montserrat',
@@ -110,7 +208,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                                   Align(
                                     alignment: Alignment(2.64, 0.55),
                                     child: Text(
-                                      'Dec. 19, 1:30pm - 2:00pm',
+                                      '50 points',
                                       style:
                                           FlutterFlowTheme.bodyText2.override(
                                         fontFamily: 'Montserrat',
@@ -180,7 +278,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                                   Align(
                                     alignment: Alignment(-0.1, -0.5),
                                     child: Text(
-                                      'Build cool app',
+                                      'Candy',
                                       style:
                                           FlutterFlowTheme.subtitle2.override(
                                         fontFamily: 'Montserrat',
@@ -193,90 +291,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                                   Align(
                                     alignment: Alignment(2.64, 0.55),
                                     child: Text(
-                                      'Dec. 19, 2:00pm - 2:30pm',
-                                      style:
-                                          FlutterFlowTheme.bodyText2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF8B97A2),
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              flex: 2,
-                              child: Align(
-                                alignment: Alignment(1, 0),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/913/400',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Align(
-                                alignment: Alignment(0.05, 0),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  color: Color(0xFF95A1AC),
-                                  size: 28,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                    child: Container(
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Card(
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: Colors.white,
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                              child: Stack(
-                                children: [
-                                  Align(
-                                    alignment: Alignment(-0.1, -0.5),
-                                    child: Text(
-                                      '???????',
-                                      style:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF15212B),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: Alignment(2.64, 0.55),
-                                    child: Text(
-                                      'Dec. 19, 2:30pm - 3:00pm',
+                                      '30 points',
                                       style:
                                           FlutterFlowTheme.bodyText2.override(
                                         fontFamily: 'Montserrat',
@@ -406,32 +421,122 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                   )
                 ],
               ),
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Color(0xFFEEEEEE),
+              Divider(
+                height: 10,
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 2, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Image.network(
+                        'https://i.pinimg.com/originals/ed/f2/4f/edf24f711c30d0a4c9b12c958c0a345a.png',
+                        width: 175,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                          child: Text(
+                            'Candy - 10 points',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                          child: FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: 'Claim',
+                            options: FFButtonOptions(
+                              width: 130,
+                              height: 40,
+                              color: FlutterFlowTheme.primaryColor,
+                              textStyle: FlutterFlowTheme.subtitle2.override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                              ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 12,
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
                 ),
-                child: Card(
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  color: Color(0xFFF5F5F5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+              ),
+              Divider(
+                height: 10,
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(30),
+                    child: Image.network(
+                      'https://ak.picdn.net/shutterstock/videos/1013157056/thumb/1.jpg',
+                      width: 175,
+                      height: 100,
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
-                  child: Row(
+                  Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Image.network(
-                          'https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/voucher/default/en-sg/Shaw-Gift-Voucher-(Brown)_270x396pix.jpg?w=128&dpr=2.6',
-                          width: 175,
-                          height: 100,
-                          fit: BoxFit.cover,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                        child: Text(
+                          'Pen - 20 points',
+                          style: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                        child: FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'Claim',
+                          options: FFButtonOptions(
+                            width: 130,
+                            height: 40,
+                            color: FlutterFlowTheme.primaryColor,
+                            textStyle: FlutterFlowTheme.subtitle2.override(
+                              fontFamily: 'Poppins',
+                              color: Colors.white,
+                            ),
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 12,
+                          ),
                         ),
                       )
                     ],
-                  ),
-                ),
+                  )
+                ],
               ),
               Divider(
                 height: 10,
@@ -463,7 +568,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(35, 10, 0, 0),
+                        padding: EdgeInsets.fromLTRB(35, 0, 0, 0),
                         child: FFButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
@@ -490,7 +595,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                 ],
               ),
               Divider(
-                height: 10,
+                height: 5,
                 thickness: 1,
                 color: Colors.black,
               ),
@@ -500,7 +605,7 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image.network(
-                      'https://images-na.ssl-images-amazon.com/images/I/51X0Elm6q3L._AC_SY580_.jpg',
+                      'https://images-na.ssl-images-amazon.com/images/I/51grtVWQzIL._AC_SY1000_.jpg',
                       width: 175,
                       height: 100,
                       fit: BoxFit.cover,
@@ -510,16 +615,16 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
+                        padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                         child: Text(
-                          'Certificate - 100 points',
+                          'Book - 60 points',
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(35, 10, 0, 0),
+                        padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                         child: FFButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
@@ -550,57 +655,59 @@ class _PointsSystemTutorWidgetState extends State<PointsSystemTutorWidget> {
                 thickness: 1,
                 color: Colors.black,
               ),
-              TextFormField(
-                controller: textController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  hintText: 'How to earn points: ',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
+              Card(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                color: Color(0xFFF5F5F5),
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                ),
-                textAlign: TextAlign.center,
-              ),
-              Text(
-                'Conducting 1 hr lesson - 5 points',
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                ),
-              ),
-              Text(
-                'Conducting 2 hr lesson - 12 points',
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                ),
-              ),
-              Text(
-                'Conducting lessons every week - 5 bonus points per month ',
-                textAlign: TextAlign.center,
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.network(
+                      'https://picsum.photos/seed/789/300',
+                      width: double.infinity,
+                      height: 120,
+                      fit: BoxFit.cover,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(15, 15, 15, 25),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'How to earn points',
+                                  textAlign: TextAlign.end,
+                                  style: FlutterFlowTheme.bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                            child: Text(
+                              '1 hr lesson - 5 points\n2 hr lesson - 12 points\nAttending lessons every week - 5 points per month ',
+                              textAlign: TextAlign.center,
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               )
             ],

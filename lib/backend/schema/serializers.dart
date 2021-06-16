@@ -7,6 +7,8 @@ import 'package:latlong/latlong.dart';
 import 'tutee_record.dart';
 import 'tutor_record.dart';
 import 'users_record.dart';
+import 'chats_record.dart';
+import 'chat_messages_record.dart';
 
 part 'serializers.g.dart';
 
@@ -16,6 +18,8 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   TuteeRecord,
   TutorRecord,
   UsersRecord,
+  ChatsRecord,
+  ChatMessagesRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

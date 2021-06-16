@@ -30,7 +30,8 @@ class _LessonHistoryWidgetState extends State<LessonHistoryWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.primaryColor,
+        backgroundColor: FlutterFlowTheme.tertiaryColor,
+        iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
         automaticallyImplyLeading: true,
         title: Text(
           'Lesson History ',
@@ -51,7 +52,7 @@ class _LessonHistoryWidgetState extends State<LessonHistoryWidget> {
             Align(
               alignment: Alignment(-0.05, -0.05),
               child: FlutterFlowCalendar(
-                color: Color(0xFFEF9A9A),
+                color: FlutterFlowTheme.primaryColor,
                 weekFormat: false,
                 weekStartsMonday: true,
                 onChange: (DateTimeRange newSelectedDate) {
@@ -97,7 +98,7 @@ class _LessonHistoryWidgetState extends State<LessonHistoryWidget> {
                       fontFamily: 'Poppins',
                       color: Colors.white,
                     ),
-                    elevation: 30,
+                    elevation: 0,
                     borderSide: BorderSide(
                       color: Colors.transparent,
                       width: 1,
