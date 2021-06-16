@@ -17,8 +17,8 @@ class RegistrationTutorWidget extends StatefulWidget {
 class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
+  bool passwordVisibility;
   TextEditingController textController3;
-  TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -26,8 +26,8 @@ class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    passwordVisibility = false;
     textController3 = TextEditingController();
-    textController4 = TextEditingController();
   }
 
   @override
@@ -133,7 +133,7 @@ class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
                           padding: EdgeInsets.fromLTRB(10, 3, 0, 2),
                           child: TextFormField(
                             controller: textController2,
-                            obscureText: false,
+                            obscureText: !passwordVisibility,
                             decoration: InputDecoration(
                               hintText: 'Password',
                               hintStyle: GoogleFonts.getFont(
@@ -159,6 +159,19 @@ class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
                                 borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(4.0),
                                   topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              suffixIcon: InkWell(
+                                onTap: () => setState(
+                                  () =>
+                                      passwordVisibility = !passwordVisibility,
+                                ),
+                                child: Icon(
+                                  passwordVisibility
+                                      ? Icons.visibility_outlined
+                                      : Icons.visibility_off_outlined,
+                                  color: Color(0xFF020202),
+                                  size: 25,
                                 ),
                               ),
                             ),
@@ -190,61 +203,6 @@ class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               hintText: 'Name ',
-                              hintStyle: GoogleFonts.getFont(
-                                'Lato',
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.black,
-                                  width: 2,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.black,
-                                  width: 2,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: GoogleFonts.getFont(
-                              'Lato',
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                child: Container(
-                  width: 285,
-                  height: 40,
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment(0, 205.04),
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 3, 0, 2),
-                          child: TextFormField(
-                            controller: textController4,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              hintText:
-                                  'I can teach                                  Student',
                               hintStyle: GoogleFonts.getFont(
                                 'Lato',
                                 color: Colors.black,

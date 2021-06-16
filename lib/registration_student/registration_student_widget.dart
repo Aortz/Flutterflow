@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -15,8 +16,10 @@ class RegistrationStudentWidget extends StatefulWidget {
 }
 
 class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
+  String dropDownValue;
   TextEditingController textController1;
   TextEditingController textController2;
+  bool passwordVisibility;
   TextEditingController textController3;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -25,6 +28,7 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    passwordVisibility = false;
     textController3 = TextEditingController();
   }
 
@@ -131,7 +135,7 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                           padding: EdgeInsets.fromLTRB(10, 3, 0, 2),
                           child: TextFormField(
                             controller: textController2,
-                            obscureText: false,
+                            obscureText: !passwordVisibility,
                             decoration: InputDecoration(
                               hintText: 'Password',
                               hintStyle: GoogleFonts.getFont(
@@ -157,6 +161,19 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                                 borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(4.0),
                                   topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              suffixIcon: InkWell(
+                                onTap: () => setState(
+                                  () =>
+                                      passwordVisibility = !passwordVisibility,
+                                ),
+                                child: Icon(
+                                  passwordVisibility
+                                      ? Icons.visibility_outlined
+                                      : Icons.visibility_off_outlined,
+                                  color: Color(0xFF020202),
+                                  size: 25,
                                 ),
                               ),
                             ),
@@ -252,6 +269,34 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                             fontFamily: 'Lato',
                             fontSize: 18,
                           ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment(0, 0),
+                        child: FlutterFlowDropDown(
+                          options: [
+                            'Primary 1',
+                            'Primary 2',
+                            'Primary 3',
+                            'Primary 4',
+                            'Primary 5',
+                            'Primary 6'
+                          ],
+                          onChanged: (value) {
+                            setState(() => dropDownValue = value);
+                          },
+                          width: 130,
+                          height: 40,
+                          textStyle: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                          ),
+                          fillColor: Colors.white,
+                          elevation: 2,
+                          borderColor: Colors.transparent,
+                          borderWidth: 0,
+                          borderRadius: 0,
+                          margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
                         ),
                       )
                     ],

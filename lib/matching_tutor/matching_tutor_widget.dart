@@ -20,8 +20,6 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
   bool checkboxListTileValue2;
   bool checkboxListTileValue3;
   bool checkboxListTileValue4;
-  bool checkboxListTileValue5;
-  bool checkboxListTileValue6;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -92,7 +90,7 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
                               ),
                               child: Container(
                                 width: 100,
-                                height: 143,
+                                height: 100,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.tertiaryColor,
                                 ),
@@ -150,20 +148,6 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
                                             controlAffinity:
                                                 ListTileControlAffinity.leading,
                                           ),
-                                        ),
-                                        Container(
-                                          width: 200,
-                                          child: CheckboxListTile(
-                                            value:
-                                                checkboxListTileValue3 ?? true,
-                                            onChanged: (newValue) => setState(
-                                                () => checkboxListTileValue3 =
-                                                    newValue),
-                                            tileColor: Color(0xFFF5F5F5),
-                                            dense: false,
-                                            controlAffinity:
-                                                ListTileControlAffinity.leading,
-                                          ),
                                         )
                                       ],
                                     ),
@@ -174,9 +158,9 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
                                           width: 200,
                                           child: CheckboxListTile(
                                             value:
-                                                checkboxListTileValue4 ?? true,
+                                                checkboxListTileValue3 ?? true,
                                             onChanged: (newValue) => setState(
-                                                () => checkboxListTileValue4 =
+                                                () => checkboxListTileValue3 =
                                                     newValue),
                                             title: Text(
                                               'Science',
@@ -195,9 +179,9 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
                                           width: 200,
                                           child: CheckboxListTile(
                                             value:
-                                                checkboxListTileValue5 ?? true,
+                                                checkboxListTileValue4 ?? true,
                                             onChanged: (newValue) => setState(
-                                                () => checkboxListTileValue5 =
+                                                () => checkboxListTileValue4 =
                                                     newValue),
                                             title: Text(
                                               'Chinese',
@@ -206,20 +190,6 @@ class _MatchingTutorWidgetState extends State<MatchingTutorWidget> {
                                                 fontFamily: 'Poppins',
                                               ),
                                             ),
-                                            tileColor: Color(0xFFF5F5F5),
-                                            dense: false,
-                                            controlAffinity:
-                                                ListTileControlAffinity.leading,
-                                          ),
-                                        ),
-                                        Container(
-                                          width: 200,
-                                          child: CheckboxListTile(
-                                            value:
-                                                checkboxListTileValue6 ?? true,
-                                            onChanged: (newValue) => setState(
-                                                () => checkboxListTileValue6 =
-                                                    newValue),
                                             tileColor: Color(0xFFF5F5F5),
                                             dense: false,
                                             controlAffinity:

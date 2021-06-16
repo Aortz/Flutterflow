@@ -57,7 +57,7 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
                       Padding(
                         padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
                         child: Text(
-                          '16 June, 2021',
+                          'Today is 17 June, 2021',
                           style: FlutterFlowTheme.bodyText2.override(
                             fontFamily: 'Montserrat',
                             color: Color(0xFF8B97A2),
@@ -94,7 +94,7 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
                                     Align(
                                       alignment: Alignment(-0.99, -0.56),
                                       child: Text(
-                                        'Math Lesson',
+                                        'Science Lesson',
                                         style:
                                             FlutterFlowTheme.subtitle2.override(
                                           fontFamily: 'Montserrat',
@@ -110,13 +110,12 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
                                         padding:
                                             EdgeInsets.fromLTRB(0, 5, 0, 0),
                                         child: Text(
-                                          '20 June, 1:30pm - 2:30pm',
+                                          '19 June, 10:00 - 11:00',
                                           style: FlutterFlowTheme.bodyText2
                                               .override(
                                             fontFamily: 'Montserrat',
                                             color: Color(0xFF8B97A2),
                                             fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
                                           ),
                                         ),
                                       ),
@@ -143,7 +142,7 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
+                                padding: EdgeInsets.fromLTRB(40, 0, 10, 0),
                                 child: Text(
                                   'Primary',
                                   style: FlutterFlowTheme.bodyText1.override(
@@ -263,7 +262,7 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
                                   Align(
                                     alignment: Alignment(-0.1, -0.5),
                                     child: Text(
-                                      'Chinese Lesson',
+                                      'Math Lesson',
                                       style:
                                           FlutterFlowTheme.subtitle2.override(
                                         fontFamily: 'Montserrat',

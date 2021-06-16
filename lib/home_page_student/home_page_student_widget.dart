@@ -27,7 +27,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.tertiaryColor,
         iconTheme: IconThemeData(color: FlutterFlowTheme.primaryColor),
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         title: Text(
           'Home Page',
           style: FlutterFlowTheme.title1.override(
@@ -48,91 +48,28 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: Container(
-                    height: 80,
+                    width: double.infinity,
+                    height: 100,
                     decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(16),
+                      color: Color(0xFFEEEEEE),
+                      borderRadius: BorderRadius.circular(8),
+                      shape: BoxShape.rectangle,
                     ),
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
-                      elevation: 2,
+                      color: Color(0x39B3E5FC),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                      child: InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.rightToLeft,
-                              duration: Duration(milliseconds: 200),
-                              reverseDuration: Duration(milliseconds: 200),
-                              child: LessonHistoryWidget(),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                              child: Stack(
-                                children: [
-                                  Align(
-                                    alignment: Alignment(-0.1, -0.5),
-                                    child: Text(
-                                      'Lessons History',
-                                      style:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF15212B),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: Alignment(2.64, 0.55),
-                                    child: Text(
-                                      'View your past lessons',
-                                      style:
-                                          FlutterFlowTheme.bodyText2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF8B97A2),
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Align(
-                                alignment: Alignment(0.76, 0),
-                                child: InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      PageTransition(
-                                        type: PageTransitionType.rightToLeft,
-                                        duration: Duration(milliseconds: 200),
-                                        reverseDuration:
-                                            Duration(milliseconds: 200),
-                                        child: LessonHistoryWidget(),
-                                      ),
-                                    );
-                                  },
-                                  child: Icon(
-                                    Icons.chevron_right,
-                                    color: Color(0xFF95A1AC),
-                                    size: 28,
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                        child: Text(
+                          'Your next lesson is scheduled on \n20 June,  1:30 - 2:30pm\nYour current points: 20',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                          ),
                         ),
                       ),
                     ),
@@ -148,100 +85,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                     ),
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.rightToLeft,
-                              duration: Duration(milliseconds: 200),
-                              reverseDuration: Duration(milliseconds: 200),
-                              child: LessonDetailStudentWidget(),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
-                              child: Stack(
-                                children: [
-                                  Align(
-                                    alignment: Alignment(-0.1, -0.5),
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(1, 0, 0, 0),
-                                      child: Text(
-                                        'Lessons Schedule',
-                                        style:
-                                            FlutterFlowTheme.subtitle2.override(
-                                          fontFamily: 'Montserrat',
-                                          color: Color(0xFF15212B),
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: Alignment(2.64, 0.55),
-                                    child: Text(
-                                      'View your upcoming lessons',
-                                      style:
-                                          FlutterFlowTheme.bodyText2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF8B97A2),
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Align(
-                                alignment: Alignment(0.7, 0),
-                                child: InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            LessonDetailStudentWidget(),
-                                      ),
-                                    );
-                                  },
-                                  child: Icon(
-                                    Icons.chevron_right,
-                                    color: Color(0xFF95A1AC),
-                                    size: 28,
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: Container(
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
+                      color: Color(0x86B3E5FC),
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -334,7 +178,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                     ),
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
+                      color: Color(0x4BB3E5FC),
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -347,7 +191,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                               type: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: ProfilePageStudentWidget(),
+                              child: LessonDetailStudentWidget(),
                             ),
                           );
                         },
@@ -360,21 +204,24 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                                 children: [
                                   Align(
                                     alignment: Alignment(-0.1, -0.5),
-                                    child: Text(
-                                      'Profile',
-                                      style:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF15212B),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
+                                    child: Padding(
+                                      padding: EdgeInsets.fromLTRB(1, 0, 0, 0),
+                                      child: Text(
+                                        'Lessons Schedule',
+                                        style:
+                                            FlutterFlowTheme.subtitle2.override(
+                                          fontFamily: 'Montserrat',
+                                          color: Color(0xFF15212B),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ),
                                   Align(
                                     alignment: Alignment(2.64, 0.55),
                                     child: Text(
-                                      'Account setting',
+                                      'View your upcoming lessons',
                                       style:
                                           FlutterFlowTheme.bodyText2.override(
                                         fontFamily: 'Montserrat',
@@ -389,17 +236,14 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                             Expanded(
                               flex: 1,
                               child: Align(
-                                alignment: Alignment(0.8, 0),
+                                alignment: Alignment(0.7, 0),
                                 child: InkWell(
                                   onTap: () async {
                                     await Navigator.push(
                                       context,
-                                      PageTransition(
-                                        type: PageTransitionType.rightToLeft,
-                                        duration: Duration(milliseconds: 200),
-                                        reverseDuration:
-                                            Duration(milliseconds: 200),
-                                        child: ProfilePageStudentWidget(),
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LessonDetailStudentWidget(),
                                       ),
                                     );
                                   },
@@ -416,13 +260,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                       ),
                     ),
                   ),
-                )
-              ],
-            ),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+                ),
                 Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: Container(
@@ -433,7 +271,100 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                     ),
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
+                      color: Color(0x49B3E5FC),
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              duration: Duration(milliseconds: 200),
+                              reverseDuration: Duration(milliseconds: 200),
+                              child: LessonHistoryWidget(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                              child: Stack(
+                                children: [
+                                  Align(
+                                    alignment: Alignment(-0.1, -0.5),
+                                    child: Text(
+                                      'Lessons History',
+                                      style:
+                                          FlutterFlowTheme.subtitle2.override(
+                                        fontFamily: 'Montserrat',
+                                        color: Color(0xFF15212B),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment(2.64, 0.55),
+                                    child: Text(
+                                      'View your past lessons',
+                                      style:
+                                          FlutterFlowTheme.bodyText2.override(
+                                        fontFamily: 'Montserrat',
+                                        color: Color(0xFF8B97A2),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Align(
+                                alignment: Alignment(0.76, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.rightToLeft,
+                                        duration: Duration(milliseconds: 200),
+                                        reverseDuration:
+                                            Duration(milliseconds: 200),
+                                        child: LessonHistoryWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Icon(
+                                    Icons.chevron_right,
+                                    color: Color(0xFF95A1AC),
+                                    size: 28,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                  child: Container(
+                    height: 80,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: Color(0x31F4EF95),
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -526,7 +457,100 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                     ),
                     child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Colors.white,
+                      color: Color(0x31F4EF95),
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              duration: Duration(milliseconds: 200),
+                              reverseDuration: Duration(milliseconds: 200),
+                              child: ProfilePageStudentWidget(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                              child: Stack(
+                                children: [
+                                  Align(
+                                    alignment: Alignment(-0.1, -0.5),
+                                    child: Text(
+                                      'Profile',
+                                      style:
+                                          FlutterFlowTheme.subtitle2.override(
+                                        fontFamily: 'Montserrat',
+                                        color: Color(0xFF15212B),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment(2.64, 0.55),
+                                    child: Text(
+                                      'Account setting',
+                                      style:
+                                          FlutterFlowTheme.bodyText2.override(
+                                        fontFamily: 'Montserrat',
+                                        color: Color(0xFF8B97A2),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Align(
+                                alignment: Alignment(0.8, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.rightToLeft,
+                                        duration: Duration(milliseconds: 200),
+                                        reverseDuration:
+                                            Duration(milliseconds: 200),
+                                        child: ProfilePageStudentWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Icon(
+                                    Icons.chevron_right,
+                                    color: Color(0xFF95A1AC),
+                                    size: 28,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                  child: Container(
+                    height: 80,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: Color(0x2BEE8B60),
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -553,7 +577,7 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                                   Align(
                                     alignment: Alignment(-0.1, -0.5),
                                     child: Text(
-                                      'F&Q',
+                                      'FAQ',
                                       style:
                                           FlutterFlowTheme.subtitle2.override(
                                         fontFamily: 'Montserrat',

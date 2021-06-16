@@ -57,7 +57,7 @@ class _LessonDetailStudentWidgetState extends State<LessonDetailStudentWidget> {
                       Padding(
                         padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
                         child: Text(
-                          'Today is 16 June, 2021',
+                          'Today is 17 June, 2021\nYour current level is Primary 6',
                           style: FlutterFlowTheme.bodyText2.override(
                             fontFamily: 'Montserrat',
                             color: Color(0xFF8B97A2),
