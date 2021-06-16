@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -16,12 +15,11 @@ class RegistrationTutorWidget extends StatefulWidget {
 }
 
 class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
-  String dropDownValue;
-  TextEditingController textController4;
   TextEditingController textController1;
   TextEditingController textController2;
   bool passwordVisibility;
   TextEditingController textController3;
+  TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -252,30 +250,6 @@ class _RegistrationTutorWidgetState extends State<RegistrationTutorWidget> {
                   height: 40,
                   child: Stack(
                     children: [
-                      Align(
-                        alignment: Alignment(0, 0),
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(30, 5, 0, 0),
-                          child: FlutterFlowDropDown(
-                            options: ['Primary', 'Secondary', 'Junior College'],
-                            onChanged: (value) {
-                              setState(() => dropDownValue = value);
-                            },
-                            width: 120,
-                            height: 50,
-                            textStyle: FlutterFlowTheme.subtitle2.override(
-                              fontFamily: 'Poppins',
-                              color: Colors.black,
-                            ),
-                            fillColor: Colors.white,
-                            elevation: 2,
-                            borderColor: Colors.transparent,
-                            borderWidth: 0,
-                            borderRadius: 0,
-                            margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
-                          ),
-                        ),
-                      ),
                       Align(
                         alignment: Alignment(0, 205.04),
                         child: Padding(

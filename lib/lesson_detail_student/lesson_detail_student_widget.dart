@@ -30,11 +30,8 @@ class _LessonDetailStudentWidgetState extends State<LessonDetailStudentWidget> {
         automaticallyImplyLeading: true,
         title: Text(
           'Lesson Details',
-          style: FlutterFlowTheme.bodyText1.override(
+          style: FlutterFlowTheme.title1.override(
             fontFamily: 'Poppins',
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
           ),
         ),
         actions: [],
@@ -291,16 +288,6 @@ class _LessonDetailStudentWidgetState extends State<LessonDetailStudentWidget> {
                             )
                           ],
                         ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                    child: Container(
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(16),
                       ),
                     ),
                   )

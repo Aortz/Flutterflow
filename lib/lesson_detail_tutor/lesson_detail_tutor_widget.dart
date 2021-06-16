@@ -30,11 +30,8 @@ class _LessonDetailTutorWidgetState extends State<LessonDetailTutorWidget> {
         automaticallyImplyLeading: true,
         title: Text(
           'Lesson Details',
-          style: FlutterFlowTheme.bodyText1.override(
+          style: FlutterFlowTheme.title1.override(
             fontFamily: 'Poppins',
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
           ),
         ),
         actions: [],

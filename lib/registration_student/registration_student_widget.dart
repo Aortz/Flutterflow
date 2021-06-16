@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -16,7 +15,6 @@ class RegistrationStudentWidget extends StatefulWidget {
 }
 
 class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
-  String dropDownValue;
   TextEditingController textController1;
   TextEditingController textController2;
   bool passwordVisibility;
@@ -261,29 +259,6 @@ class _RegistrationStudentWidgetState extends State<RegistrationStudentWidget> {
                   height: 40,
                   child: Stack(
                     children: [
-                      Align(
-                        alignment: Alignment(0, 0),
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(20, 5, 0, 0),
-                          child: FlutterFlowDropDown(
-                            options: ['Primary', 'Secondary', 'Junior College'],
-                            onChanged: (value) {
-                              setState(() => dropDownValue = value);
-                            },
-                            width: 130,
-                            height: 40,
-                            textStyle: FlutterFlowTheme.subtitle2.override(
-                              fontFamily: 'Poppins',
-                            ),
-                            fillColor: Colors.white,
-                            elevation: 2,
-                            borderColor: Colors.transparent,
-                            borderWidth: 0,
-                            borderRadius: 0,
-                            margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
-                          ),
-                        ),
-                      ),
                       Align(
                         alignment: Alignment(-0.9, 0),
                         child: Text(
