@@ -1,14 +1,10 @@
 import '../f_a_q_page/f_a_q_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../lesson_detail_student/lesson_detail_student_widget.dart';
 import '../lesson_detail_tutor/lesson_detail_tutor_widget.dart';
 import '../lesson_history/lesson_history_widget.dart';
-import '../matching_student/matching_student_widget.dart';
 import '../matching_tutor/matching_tutor_widget.dart';
-import '../points_system_student/points_system_student_widget.dart';
 import '../points_system_tutor/points_system_tutor_widget.dart';
-import '../profile_page_student/profile_page_student_widget.dart';
 import '../profile_page_tutor/profile_page_tutor_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,36 +48,6 @@ class _HomePageTutorWidgetState extends State<HomePageTutorWidget> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: Container(
-                    width: double.infinity,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFEEEEEE),
-                      borderRadius: BorderRadius.circular(8),
-                      shape: BoxShape.rectangle,
-                    ),
-                    child: Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Color(0x39B3E5FC),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Text(
-                          'Your next lesson is scheduled on \n19 June, 10:00 - 11:00\nYour current points: 30',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: Container(
                     height: 80,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
@@ -102,7 +68,7 @@ class _HomePageTutorWidgetState extends State<HomePageTutorWidget> {
                               type: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: MatchingStudentWidget(),
+                              child: MatchingTutorWidget(),
                             ),
                           );
                         },
@@ -195,7 +161,7 @@ class _HomePageTutorWidgetState extends State<HomePageTutorWidget> {
                               type: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: LessonDetailStudentWidget(),
+                              child: LessonDetailTutorWidget(),
                             ),
                           );
                         },
@@ -381,7 +347,7 @@ class _HomePageTutorWidgetState extends State<HomePageTutorWidget> {
                               type: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: PointsSystemStudentWidget(),
+                              child: PointsSystemTutorWidget(),
                             ),
                           );
                         },
@@ -474,7 +440,7 @@ class _HomePageTutorWidgetState extends State<HomePageTutorWidget> {
                               type: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
                               reverseDuration: Duration(milliseconds: 200),
-                              child: ProfilePageStudentWidget(),
+                              child: ProfilePageTutorWidget(),
                             ),
                           );
                         },

@@ -106,7 +106,7 @@ class _MatchingStudentWidgetState extends State<MatchingStudentWidget> {
                                             children: [
                                               CheckboxListTile(
                                                 value: checkboxListTileValue1 ??
-                                                    false,
+                                                    true,
                                                 onChanged: (newValue) =>
                                                     setState(() =>
                                                         checkboxListTileValue1 =
@@ -132,7 +132,7 @@ class _MatchingStudentWidgetState extends State<MatchingStudentWidget> {
                                           width: 200,
                                           child: CheckboxListTile(
                                             value:
-                                                checkboxListTileValue2 ?? true,
+                                                checkboxListTileValue2 ?? false,
                                             onChanged: (newValue) => setState(
                                                 () => checkboxListTileValue2 =
                                                     newValue),
@@ -161,7 +161,7 @@ class _MatchingStudentWidgetState extends State<MatchingStudentWidget> {
                                           width: 200,
                                           child: CheckboxListTile(
                                             value:
-                                                checkboxListTileValue3 ?? true,
+                                                checkboxListTileValue3 ?? false,
                                             onChanged: (newValue) => setState(
                                                 () => checkboxListTileValue3 =
                                                     newValue),
@@ -182,7 +182,7 @@ class _MatchingStudentWidgetState extends State<MatchingStudentWidget> {
                                           width: 200,
                                           child: CheckboxListTile(
                                             value:
-                                                checkboxListTileValue4 ?? true,
+                                                checkboxListTileValue4 ?? false,
                                             onChanged: (newValue) => setState(
                                                 () => checkboxListTileValue4 =
                                                     newValue),

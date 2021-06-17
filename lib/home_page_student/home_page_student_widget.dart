@@ -48,36 +48,6 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: Container(
-                    width: double.infinity,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFEEEEEE),
-                      borderRadius: BorderRadius.circular(8),
-                      shape: BoxShape.rectangle,
-                    ),
-                    child: Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: Color(0x39B3E5FC),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Text(
-                          'Your next lesson is scheduled on \n20 June,  1:30 - 2:30pm\nYour current points: 20',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: Container(
                     height: 80,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
@@ -113,12 +83,8 @@ class _HomePageStudentWidgetState extends State<HomePageStudentWidget> {
                                     alignment: Alignment(-0.1, -0.5),
                                     child: Text(
                                       'Schedule a Lesson',
-                                      style:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Color(0xFF15212B),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
+                                      style: FlutterFlowTheme.title3.override(
+                                        fontFamily: 'Poppins',
                                       ),
                                     ),
                                   ),

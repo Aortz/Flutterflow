@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'auth/firebase_user_provider.dart';
 import 'package:codeexp/login/login_widget.dart';
-import 'package:codeexp/home_page_student/home_page_student_widget.dart';
+import 'package:codeexp/profile_page_student/profile_page_student_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? HomePageStudentWidget()
+              ? ProfilePageStudentWidget()
               : LoginWidget(),
     );
   }

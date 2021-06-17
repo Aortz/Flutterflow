@@ -1,8 +1,7 @@
-import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../home_page_student/home_page_student_widget.dart';
+import '../home_page_tutor/home_page_tutor_widget.dart';
 import '../registration/registration_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,16 +15,16 @@ class LoginWidget extends StatefulWidget {
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
-  TextEditingController emailTextController;
-  TextEditingController passwordTextController;
+  TextEditingController textController1;
+  TextEditingController textController2;
   bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailTextController = TextEditingController();
-    passwordTextController = TextEditingController();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
     passwordVisibility = false;
   }
 
@@ -90,7 +89,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   child: Padding(
                                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                                     child: TextFormField(
-                                      controller: emailTextController,
+                                      controller: textController1,
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         hintText: 'Email',
@@ -141,7 +140,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   child: Padding(
                                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                                     child: TextFormField(
-                                      controller: passwordTextController,
+                                      controller: textController2,
                                       obscureText: !passwordVisibility,
                                       decoration: InputDecoration(
                                         hintText: 'Password',
@@ -196,22 +195,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                 child: FFButtonWidget(
                                   onPressed: () async {
-                                    final user = await signInWithEmail(
-                                      context,
-                                      emailTextController.text,
-                                      passwordTextController.text,
-                                    );
-                                    if (user == null) {
-                                      return;
-                                    }
-
-                                    await Navigator.pushAndRemoveUntil(
+                                    await Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            HomePageStudentWidget(),
+                                            HomePageTutorWidget(),
                                       ),
-                                      (r) => false,
                                     );
                                   },
                                   text: 'Sign in',

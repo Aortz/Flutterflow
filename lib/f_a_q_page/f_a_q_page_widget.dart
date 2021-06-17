@@ -52,75 +52,91 @@ class _FAQPageWidgetState extends State<FAQPageWidget> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                            child: Card(
-                              clipBehavior: Clip.antiAliasWithSaveLayer,
-                              color: FlutterFlowTheme.tertiaryColor,
-                              elevation: 3,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(0, 4, 0, 0),
-                                          child: Text(
-                                            'How has Covid-19 affected volunteering?',
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.primaryColor,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                              child: Card(
+                                clipBehavior: Clip.antiAliasWithSaveLayer,
+                                color: FlutterFlowTheme.tertiaryColor,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(12, 4, 12, 4),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 4, 0, 0),
+                                              child: Text(
+                                                'How has Covid-19 affected volunteering?',
+                                                style: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme
+                                                      .primaryColor,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.85,
+                                        height: 1,
+                                        decoration: BoxDecoration(
+                                          color: Color(0xFFDBE2E7),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(12, 4, 12, 4),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 10, 0, 10),
+                                                child: Text(
+                                                  'There has been a huge decrease in number of volunteers given that volunteer work has predominantly been offline in nature! ',
+                                                  textAlign: TextAlign.justify,
+                                                  style: FlutterFlowTheme
+                                                      .bodyText2
+                                                      .override(
+                                                    fontFamily: 'Poppins',
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                  Container(
-                                    width: MediaQuery.of(context).size.width *
-                                        0.85,
-                                    height: 1,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFFDBE2E7),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Text(
-                                            'There has been a huge decrease in number of volunteers given that volunteer work has predominantly been offline in nature! ',
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
@@ -178,11 +194,20 @@ class _FAQPageWidgetState extends State<FAQPageWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Text(
-                                              'This application aims to provide volunteers a means to volunteer virtually instead of in person, hence making volunteering more convenient and safe during the COVID 19 pandemic. ',
-                                              style: FlutterFlowTheme.bodyText2
-                                                  .override(
-                                                fontFamily: 'Poppins',
+                                            child: Align(
+                                              alignment: Alignment(0.05, 0),
+                                              child: Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 10, 0, 10),
+                                                child: Text(
+                                                  'This application aims to provide volunteers a means to volunteer virtually instead of in person, hence making volunteering more convenient and safe during the COVID 19 pandemic. ',
+                                                  textAlign: TextAlign.justify,
+                                                  style: FlutterFlowTheme
+                                                      .bodyText2
+                                                      .override(
+                                                    fontFamily: 'Poppins',
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           )
@@ -253,11 +278,16 @@ class _FAQPageWidgetState extends State<FAQPageWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Text(
-                                              'Support us by donating, volunteering with us or endorse our volunteering certificate! For more enquiries, do email 123456@gmail.com!',
-                                              style: FlutterFlowTheme.bodyText2
-                                                  .override(
-                                                fontFamily: 'Poppins',
+                                            child: Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 10, 0, 10),
+                                              child: Text(
+                                                'Support us by donating, volunteering with us or endorse our volunteering certificate! For more enquiries, do email 123456@gmail.com!',
+                                                style: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Poppins',
+                                                ),
                                               ),
                                             ),
                                           )
@@ -328,11 +358,16 @@ class _FAQPageWidgetState extends State<FAQPageWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Text(
-                                              'The application matches volunteers who best fit a corresponding student according to our application algorithm which considers the profiles of both volunteer and student as well as their schedules. ',
-                                              style: FlutterFlowTheme.bodyText2
-                                                  .override(
-                                                fontFamily: 'Poppins',
+                                            child: Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 10, 0, 10),
+                                              child: Text(
+                                                'The application matches volunteers who best fit a corresponding student according to our application algorithm which considers the profiles of both volunteer and student as well as their schedules. ',
+                                                style: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Poppins',
+                                                ),
                                               ),
                                             ),
                                           )
@@ -351,14 +386,14 @@ class _FAQPageWidgetState extends State<FAQPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsets.fromLTRB(16, 12, 12, 12),
+                          padding: EdgeInsets.fromLTRB(16, 20, 12, 12),
                           child: Text(
                             'Check our website for more information!',
-                            textAlign: TextAlign.start,
+                            textAlign: TextAlign.center,
                             style: FlutterFlowTheme.bodyText2.override(
                               fontFamily: 'Poppins',
                               color: FlutterFlowTheme.primaryColor,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         )
